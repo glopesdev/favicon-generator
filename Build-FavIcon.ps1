@@ -6,11 +6,11 @@ ForEach ($icon in $args)
 	$output = [System.IO.Path]::ChangeExtension($icon,".ico")
 	if ($icon -like "*.svg")
 	{
-		&inkscape $icon --export-filename=build/16.png --export-dpi=2.40 --export-background-opacity=0 | Out-Default
-		&inkscape $icon --export-filename=build/32.png --export-dpi=4.80 --export-background-opacity=0 | Out-Default
-		&inkscape $icon --export-filename=build/48.png --export-dpi=7.20 --export-background-opacity=0 | Out-Default
-		&inkscape $icon --export-filename=build/64.png --export-dpi=9.60 --export-background-opacity=0 | Out-Default
-		&inkscape $icon --export-filename=build/256.png --export-dpi=38.40 --export-background-opacity=0 | Out-Default
+		&inkscape $icon --export-filename=build/16.png --export-width=16 --export-background-opacity=0 | Out-Default
+		&inkscape $icon --export-filename=build/32.png --export-width=32 --export-background-opacity=0 | Out-Default
+		&inkscape $icon --export-filename=build/48.png --export-width=48 --export-background-opacity=0 | Out-Default
+		&inkscape $icon --export-filename=build/64.png --export-width=64 --export-background-opacity=0 | Out-Default
+		&inkscape $icon --export-filename=build/256.png --export-width=256 --export-background-opacity=0 | Out-Default
 	}
 	else
 	{
